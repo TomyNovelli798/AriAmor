@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logoAmor.jpg">
+    <title>Cumple mes</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #48005e, #884299);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Aclubic Regular';
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black, 0 0 40px black;
+        }
+
+        .subtitulo {
+            font-size: 2rem;
+            color: red;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mensaje">Te amo mi bandolera</h1>
+    <h2 class="subtitulo">Feliz 3 años y 9 meses!! ❤️</h2>
+
+    <script>
+        // Esta función cambia el color del texto
+        function cambiar_color(elemento, color) {
+            elemento.style.color = color;
+        }
+
+        // Estos son los códigos de color para el texto
+        var colores = ["red", "green", "blue", "yellow", "magenta", "cyan"];
+
+        // Este es el elemento que se mostrará
+        var mensaje = document.getElementById("mensaje");
+
+        // Este bucle hace que el mensaje cambie de color cada 2 segundos
+        setInterval(function() {
+            var color_aleatorio = colores[Math.floor(Math.random() * colores.length)];
+            cambiar_color(mensaje, color_aleatorio);
+        }, 2000); // Espera 2 segundos antes de cambiar el color de nuevo
+    </script>
+</body>
+</html>
